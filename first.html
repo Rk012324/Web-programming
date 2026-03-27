@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Hello World Program</title>
+
+<script>
+function showMessage()
+{
+    var element = document.getElementById("message");
+    element.outerHTML = "<p id='message'>Hello, world!</p>";
+}
+</script>
+
+<style>
+#studentInfo{
+position:absolute;
+top:10px;
+right:10px;
+border:1px solid black;
+border-collapse:collapse;
+padding:5px;
+}
+</style>
+
+</head>
+
+<body>
+
+<h2>Simple JavaScript DOM Example</h2>
+
+<button onclick="showMessage()">Click Me</button>
+
+<p id="message"></p>
+
+<table id="studentInfo">
+<tr>
+<td><b>Name</b></td>
+<td>Rishikesh Kumar</td>
+</tr>
+<tr>
+<td><b>Reg No</b></td>
+<td>24BCE0187</td>
+</tr>
+</table>
+
+</body>
+</html>
