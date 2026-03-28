@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    .gallery { position: relative; height: 300px; }
+    
+    .photo {
+      position: absolute;
+      width: 200px;
+      height: 150px;
+      border: 5px solid white;
+      box-shadow: 0 0 10px rgba(0,0,0,0.5);
+      cursor: pointer;
+    }
+
+    #img1 { top: 10px; left: 10px; background-color: red; }
+    #img2 { top: 40px; left: 60px; background-color: green; }
+    #img3 { top: 70px; left: 110px; background-color: blue; }
+  </style>
+</head>
+<body>
+
+  <h2>Stacking Image Gallery</h2>
+  <p>Click an image to bring it to the front.</p>
+
+  <div class="gallery">
+    <div id="img1" class="photo" onclick="bringToFront(this)"></div>
+    <div id="img2" class="photo" onclick="bringToFront(this)"></div>
+    <div id="img3" class="photo" onclick="bringToFront(this)"></div>
+</div>
+
+  <script>
+    var topIndex = 1;
+
+    function bringToFront(element) {
+      element.style.zIndex = ++topIndex;
+    }
+  </script>
+<table id="studentInfo">
+<tr>
+<td><b>Name</b></td>
+<td>Rishikesh Kumar</td>
+</tr>
+<tr>
+<td><b>Reg No</b></td>
+<td>24BCE0187</td>
+</tr>
+</table>
+</body>
+</html>
+
