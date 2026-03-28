@@ -1,1 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Radio Button Selection</title>
 
+<script>
+function showColor()
+{
+    var colors = document.getElementsByName("color");
+    var selected = "";
+
+    for(var i = 0; i < colors.length; i++)
+    {
+        if(colors[i].checked)
+        {
+            selected = colors[i].value;
+        }
+    }
+
+    document.getElementById("result").innerHTML = "Selected Color: " + selected;
+}
+</script>
+
+<style>
+#studentInfo{
+position:absolute;
+top:10px;
+right:10px;
+border:1px solid black;
+padding:5px;
+}
+</style>
+
+</head>
+
+<body>
+
+<h2>Select a Color</h2>
+
+<input type="radio" name="color" value="Red"> Red<br>
+<input type="radio" name="color" value="Green"> Green<br>
+<input type="radio" name="color" value="Blue"> Blue<br><br>
+
+<button onclick="showColor()">Show Selected Color</button>
+
+<p id="result"></p>
+
+<table id="studentInfo">
+<tr>
+<td><b>Name</b></td>
+<td>Rishikesh Kumar</td>
+</tr>
+<tr>
+<td><b>Reg No</b></td>
+<td>24BCE0187</td>
+</tr>
+</table>
+
+</body>
+</html>
