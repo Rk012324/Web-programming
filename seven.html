@@ -1,0 +1,58 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>Print Numbers Using While Loop</title>
+
+<script>
+function printNumbers()
+{
+    var n = parseInt(document.getElementById("num").value);
+    var i = 1;
+    var output = "";
+
+    while(i <= n)
+    {
+        output += i + " ";
+        i++;
+    }
+
+    document.getElementById("result").innerHTML = output;
+}
+</script>
+
+<style>
+#studentInfo{
+position:absolute;
+top:10px;
+right:10px;
+border:1px solid black;
+padding:5px;
+}
+</style>
+
+</head>
+
+<body>
+
+<h2>Print Numbers from 1 to N</h2>
+
+Enter N: <input type="text" id="num"><br><br>
+
+<button onclick="printNumbers()">Print Numbers</button>
+
+<p id="result"></p>
+
+<table id="studentInfo">
+<tr>
+<td><b>Name</b></td>
+<td>Rishikesh Kumar</td>
+</tr>
+<tr>
+<td><b>Reg No</b></td>
+<td>24BCE0187</td>
+</tr>
+</table>
+
+</body>
+</html>
