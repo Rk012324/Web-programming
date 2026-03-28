@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Font Customization Tool</title>
+
+<style>
+fieldset{
+margin-bottom:15px;
+padding:10px;
+}
+
+#text{
+margin-top:20px;
+padding:10px;
+border:1px solid black;
+}
+
+#studentInfo{
+position:absolute;
+top:10px;
+right:10px;
+border:1px solid black;
+padding:5px;
+}
+</style>
+
+<script>
+function changeFontSize(size)
+{
+    document.getElementById("text").style.fontSize = size + "px";
+}
+
+function changeTextColor(color)
+{
+    document.getElementById("text").style.color = color;
+}
+
+function changeBackground(color)
+{
+    document.getElementById("text").style.backgroundColor = color;
+}
+</script>
+
+</head>
+
+<body>
+
+<h2>Dynamic Font Customization Tool</h2>
+
+<fieldset>
+<legend>Font Size</legend>
+<input type="range" min="10" max="50" value="20"
+oninput="changeFontSize(this.value)">
+</fieldset>
+
+<fieldset>
+<legend>Text Color</legend>
+<input type="color" onchange="changeTextColor(this.value)">
+</fieldset>
+
+<fieldset>
+<legend>Background Color</legend>
+<input type="color" onchange="changeBackground(this.value)">
+</fieldset>
+
+<p id="text">This is a sample text. Customize the font style using the controls above.</p>
+
+<table id="studentInfo">
+<tr>
+<td><b>Name</b></td>
+<td>Rishikesh Kumar</td>
+</tr>
+<tr>
+<td><b>Reg No</b></td>
+<td>24BCE0187</td>
+</tr>
+</table>
+
+</body>
+</html>
