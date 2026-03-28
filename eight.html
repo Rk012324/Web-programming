@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Multiplication Table using Do-While</title>
+
+<script>
+function printTable()
+{
+    var num = parseInt(document.getElementById("number").value);
+    var i = 1;
+    var output = "";
+
+    do
+    {
+        output += num + " x " + i + " = " + (num * i) + "<br>";
+        i++;
+    }
+    while(i <= 10);
+
+    document.getElementById("result").innerHTML = output;
+}
+</script>
+
+<style>
+#studentInfo{
+position:absolute;
+top:10px;
+right:10px;
+border:1px solid black;
+padding:5px;
+}
+</style>
+
+</head>
+
+<body>
+
+<h2>Multiplication Table Generator</h2>
+
+Enter Number: <input type="text" id="number"><br><br>
+
+<button onclick="printTable()">Generate Table</button>
+
+<p id="result"></p>
+
+<table id="studentInfo">
+<tr>
+<td><b>Name</b></td>
+<td>Rishikesh Kumar</td>
+</tr>
+<tr>
+<td><b>Reg No</b></td>
+<td>24BCE0187</td>
+</tr>
+</table>
+
+</body>
+</html>
