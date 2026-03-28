@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Product Order Form</title>
+
+<script>
+function calculateTotal()
+{
+    var items = document.querySelectorAll('input[name="product"]:checked');
+    var total = 0;
+
+    for (var item of items)
+    {
+        total += parseFloat(item.value);
+    }
+
+    document.getElementById("result").innerHTML =
+    "Total Price: ₹ " + total.toFixed(2);
+}
+</script>
+
+<style>
+fieldset{
+margin-bottom:15px;
+padding:10px;
+}
+
+#studentInfo{
+position:absolute;
+top:10px;
+right:10px;
+border:1px solid black;
+padding:5px;
+}
+</style>
+
+</head>
+
+<body>
+
+<h2>Product Order Form</h2>
+
+<form>
+
+<fieldset>
+<legend>Electronics</legend>
+
+<input type="checkbox" name="product" value="50000"> Laptop (₹50000)<br>
+<input type="checkbox" name="product" value="20000"> Tablet (₹20000)<br>
+<input type="checkbox" name="product" value="15000"> Mobile (₹15000)<br>
+
+</fieldset>
+
+<fieldset>
+<legend>Accessories</legend>
+
+<input type="checkbox" name="product" value="2000"> Headphones (₹2000)<br>
+<input type="checkbox" name="product" value="1500"> Keyboard (₹1500)<br>
+<input type="checkbox" name="product" value="1000"> Mouse (₹1000)<br>
+
+</fieldset>
+
+<button type="button" onclick="calculateTotal()">Calculate Total</button>
+
+</form>
+
+<p id="result"></p>
+
+<table id="studentInfo">
+<tr>
+<td><b>Name</b></td>
+<td>Rishikesh Kumar</td>
+</tr>
+<tr>
+<td><b>Reg No</b></td>
+<td>24BCE0187</td>
+</tr>
+</table>
+
+</body>
+</html>
