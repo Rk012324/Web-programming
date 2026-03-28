@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Checkbox Selection Counter</title>
+
+<script>
+function countSubjects()
+{
+    var subjects = document.getElementsByName("subject");
+    var selected = [];
+    var count = 0;
+
+    for(var i = 0; i < subjects.length; i++)
+    {
+        if(subjects[i].checked)
+        {
+            selected.push(subjects[i].value);
+            count++;
+        }
+    }
+
+    document.getElementById("result").innerHTML =
+    "Selected Subjects: " + selected.join(", ") +
+    "<br>Total Selected: " + count;
+}
+</script>
+
+<style>
+#studentInfo{
+position:absolute;
+top:10px;
+right:10px;
+border:1px solid black;
+padding:5px;
+}
+</style>
+
+</head>
+
+<body>
+
+<h2>Select Subjects</h2>
+
+<input type="checkbox" name="subject" value="Mathematics"> Mathematics<br>
+<input type="checkbox" name="subject" value="Physics"> Physics<br>
+<input type="checkbox" name="subject" value="Chemistry"> Chemistry<br>
+<input type="checkbox" name="subject" value="Computer Science"> Computer Science<br><br>
+
+<button onclick="countSubjects()">Show Selection</button>
+
+<p id="result"></p>
+
+<table id="studentInfo">
+<tr>
+<td><b>Name</b></td>
+<td>Rishikesh Kumar</td>
+</tr>
+<tr>
+<td><b>Reg No</b></td>
+<td>24BCE0187</td>
+</tr>
+</table>
+
+</body>
+</html>
